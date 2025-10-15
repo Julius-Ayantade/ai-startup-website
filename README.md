@@ -1,14 +1,32 @@
-# **Mini Project - Basic Git Commands**
+# **Mini Project - Git Branching and Merging**
 ---
-# Hands-On Git Project: Collaborative Website Development with Git and GitHub
 
-This is a step-by-step project to simulate the workflow of Tom and Jerry using Git and GitHub. This hands-on project include installation of Git, setting up a GitHub repository, cloning the repository, creating branches, making changes, and merging those changes back into the main branch.
+**Part 3: Merging Changes**
+
+After both Tom and Jerry have pushed their changes, other team member can review and merge these changes into the main project. The process involves
+
+1. Creating a **Pull Request**.
+2. Merging the Pull Request into the **main** branch.
+
+**Understanding Pull Requests:**
+
+**A Pull Request (PR)** is a feature used in GitHub (and other Git-based version control systems) that allows you to notify team members about the changes you have pushed to a branch in a repository. Essentially, it is a request to review and pull in your contribution to the main project. Pull requests are central to the collaborative development process, enabling team members to discuss, review, and make further changes before changes are merged.
+
+**How to Create a Pull Request on GitHub**
+
+After both Tom and Jerry have pushed their work to their respective branches, the next step is to create a pull request for each of them. Here is how Tom would create a pull request for his changes.
+
+1. **Navigate to Your GitHub Repository:**
+
+* Open your web browser and go to the GitHub page for the repository.
+
+2. **Switch to the Branch:**
+
+* Click on the branch dropdown menu near the top-left corner of the file and select the branch Tom have been working on (update-navigation) branch.
+* 
 
 
-**Part 1: Setup and Initial Configuration**
 
-
-1. **Install Git:**
 
 * Both Tom and Jerry have Git downloaded and installed on their computers by logging in to https://git-scm.com and follow the installation process.
 
@@ -18,7 +36,7 @@ This is a step-by-step project to simulate the workflow of Tom and Jerry using G
 ![sudo](./img/4.git_launching.png)
 
 
-2. **Create a GitHub Repository**
+1. **Create a GitHub Repository**
 
 * Login to GitHub.
 
