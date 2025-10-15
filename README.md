@@ -90,7 +90,7 @@ This is a step-by-step project to simulate the workflow of Tom and Jerry using G
   
   ``git push origin main``
 
-  This sends commits from your main branc on your laptop to GitHub (Remote Repository).
+  This sends commits from your main branch on your laptop to GitHub (Remote Repository).
 
 
 **Part 2: Simulating Tom and Jerry's Work**
