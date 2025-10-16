@@ -3,14 +3,18 @@
 
 **Part 3: Merging Changes**
 
+
 After both Tom and Jerry have pushed their changes, other team member can review and merge these changes into the main project. The process involves
 
 1. Creating a **Pull Request**.
+
 2. Merging the Pull Request into the **main** branch.
+
 
 **Understanding Pull Requests:**
 
 **A Pull Request (PR)** is a feature used in GitHub (and other Git-based version control systems) that allows you to notify team members about the changes you have pushed to a branch in a repository. Essentially, it is a request to review and pull in your contribution to the main project. Pull requests are central to the collaborative development process, enabling team members to discuss, review, and make further changes before changes are merged.
+
 
 **How to Create a Pull Request on GitHub**
 
@@ -22,235 +26,91 @@ After both Tom and Jerry have pushed their work to their respective branches, th
 
 2. **Switch to the Branch:**
 
-* Click on the branch dropdown menu near the top-left corner of the file and select the branch Tom have been working on (update-navigation) branch.
+* Click on the branch dropdown menu near the top-left corner of the file and select the branch Tom that you have been working on ("update-navigation".)
 * 
 
+![sudo](./img/1.GitHub_main_branch.png)
 
 
+3. **Compare & Pull Request:**
 
-* Both Tom and Jerry have Git downloaded and installed on their computers by logging in to https://git-scm.com and follow the installation process.
-
-  
-![sudo](./img/3.git_download.png)
-
-![sudo](./img/4.git_launching.png)
+* Click on the compare & pull request as shown below;
 
 
-1. **Create a GitHub Repository**
+![sudo](./img/001.pull_request_update_navigation.png)
 
-* Login to GitHub.
+4. **Review Tom's Changes:**
 
-* Click the "+" icon in the top-right corner and select "New repository."
+* Before creating the pull request, Tom would review his changes to ensure everything is correct. GitHub shows the differences between the base branch and and Tom's branch. It's a good opportunity for Tom to double-check his work.
 
-![sudo](./img/1.new_repo.png)
+5. **Create the Pull Request:**
 
+* If everything looks good, click the **"Create pull request"** button. 
 
-* Name your repository (**"ai-startup-website"**) and initialize it with a README file.
+* Provide a title and description for the pull request. The title should be concise and descriptive, and the description should explain the change that the pull request is about, why it's needed, and any other relevant details.
 
-![sudo](./img/2.create_new_repo.png)
-
-* Click "Create repository."
-  
-
-3. **Clone the Repository**
-
-* Click the **"Code"** button and copy the HTTPS URL.
-  
-![sudo](./img/3.copy_code.png) 
+* After filling in the information, click **"Create pull request" button.
 
 
-* Open your terminal or command prompt.
+**Reviewing and Merging Tom's Pull Request**
 
-* Create a folder named **"git-project**" in the folder where you are storing all **DAREY.IO** related work.
+Once the pull request is created, it becomes visible to other team members who can review the changes, leave comments, and request additional modifications if necessary (this is an example of what collaboration is about in DevOps). When the team agrees that the changes are ready and good to go, someone with merge permissions can merge the pull request, incorporating the changes from Tom's **update-navigation** branch into the main branch.
 
-* Change directory into the **"git-project"**.
-  
-* Clone (Download) the repository from GitHub using the command: 
-
-  ``git clone [Past the URL copied from GitHub]``
-
-![sudo](./img/1.git_clone.png)
+Following the same process, Jerry would create a pull request for his **add-contact-info** branch after Tom's changes have been merged, ensuring that the project stays up to date and conflicts are minimized.
 
 
-* Since you just cloned your repository, your branch is **``main``**
+**Updating Jerry's Branch with Latest Changes**
 
-* Navigate into the repository you cloned using the command: 
+Before Jerry merges his changes into the main branch, it's essential to ensure his branch is up-to-date with the main branch. This is because other changes (like Tom's updates) might have been merged into the main branch after Jerry started working on his feature. Updating ensures compatibility and reduces the chances of conflicts.
 
-  ``cd ai-startup-website``
 
-* Create an empty file **"index.html"**
-  
-* Add the content below
-  
-  ``This is the Admin creating an index.html file for Tom and Jerry.``
+**Steps to Update Jerry's Branch:**
 
-* Check changes has not been staged using the command: 
-  
-  ``git status``
-  
-* Stage changes using the command: 
+* On the terminal, Switch to Jerry's branch using the command:
  
-  ``git add index.html``
+  ``git checkout add-contact-info``
 
-* Confirm changes have been staged for commit: 
-  
-  ``git status``
-
-* After staging the changes, the file name will appear in **green** in the terminal output. The colour change signifies that the file has been successfully staged, making it ready for the next step, which is committing these changes to the project's history.
-
-* Commit changes using the command: 
-  
-  ``git commit -m "This is my first commit"``
-
-* This takes the staged changes and record them in the repository's history with a message describing what was done . This commit is a milestone, making a specific point in the project's development.
-
-* Push main branch to GitHub using the command: 
-  
-  ``git push origin main``
-
-  This sends commits from your main branch on your laptop to GitHub (Remote Repository).
+* Pull the latest changes from the main branch using the command:
+ 
+  ``git pull origin main``
 
 
-**Part 2: Simulating Tom and Jerry's Work**
-
-To simulate both Tom and Jerry working on the same laptop, you'll switch between two branches, making changes as each character.
-  
-
-1. **Tom's Work:**
-   
-* Navigate to the project directory you just cloned using the command: 
-
-  ``cd ai-startup-website``
-
-  This moves you into the folder containing the cloned GitHub repository on your local machine.
-
-* Check the current branch: This shows you a list of all branches in your local repository. Initially, you'll see only the **`"main"`** branch because that's the default starting point and no other branches have been created yet.
-
-  ``git branch``
-
-* Create a new branch for Tom's work using the command: 
-  
-  ``git checkout -b update-navigation``
-
-![sudo](./img/2.Tom_branch.png)
+![sudo](./img/09_Jerry_checkout_push.png)
 
 
-  This creates a new branch name **"update-navigation"**. The command also automatically switches to the newly created branch from the **"main"** branch. This branch **"update-navigaton"** is where you'll simulate Tom's updates to the website without affecting whatever is in the **main** branch.
+ Purpose: This command fetches the changes from the **main** branch and merges them into Jerry's **add-contact-info** branch. It ensures that any updates made to the main branch, like Tom's merged changes, are now included in Jerry's branch. This step is crucial for avoiding conflicts and ensuring that Jerry's work can smoothly integrate with the main project.
+
+* Merge the pull request to the main branch: Click the **"Merge pull request"** button to merge Tom's changes into the **main** branch. This action combines Tom's contributions with the rest of the project, completing the collaborative workflow.
 
 
-* Check the branch again to see your newly created branch using the command: 
-  
-  ``git branch``
-
-![sudo](./img/3.update_navigation.png)
+![sudo](./img/005.Merge_Pull_Request.png)
 
 
-Running ``git branch`` again now shows your newly created branch, indicating you're now working in this new **"workspace"** dedicated to Tom's navigation updates.
 
-* Recall you created an empty file **"index.html"** in the main. The file will also exist in the **"update-navigation"**. Open the **"index.html"** and add the content below.
+**Finalizing Jerry's Contribution**
 
-``This is Tom adding Navigation to the AI-website``
+Assuming there are no conflicts, Jerry's branch is now ready to be merged back into the main project.
 
-This stimulates Tom's contribution to the project. This text represents the work he's doing on the navigation bar. In the real world, this will be an actual software code.
-
-* Check changes has not been stages using the command: ``git status``
-
-![sudo](./img/001_index_html.png)
-
-
-At this stage, Tom has modified the file but these changes have not been prepared for a commit in Git. This is indicated by the file name appearing in **red** in the terminal output, signaling that the changes are recognized by Git but not yet staged.
-
-* Stage Tom's changes using the command: 
-  
-  ``git add index.html``
-  
-This tells Git you want to include the updates made to **index.html** in the next commit. 
-
-* Confirm changes have been staged for commit using the command: 
-  
-  ``git status``
-
-
-![sudo](./img/002_index_committed.png)
-
-
-  Now, after staging the changes, the file name will appear in **green** in the terminal output. This colour change signifies that the file has been successfully staged, making it ready for the next step, which is committing these changes to the project's history.
-
-* Commit Tom's changes using the command: 
-
-  ``git commit -m "Update navigation bar"``
-
-  This takes the staged changes and record them in the repository's history with a message describing what was done. This commit is a milestone, marking a specific point in the project's development.
-
-* Push Toms branch to GitHub using the command: 
-  
-  ``git push origin update-navigation``
-
-
-![sudo](./img/06_Tom_add_commit_pushed.png)
-
-
-  This sends Tom's commits from your local branch on your laptop to GitHub (Remote Repository). It is like publishing your work so that others (in this case, "Jerry") can see and interact with it. This step updates the remote repository with Tom's contributions.
-
-After completing Tom's workflow, you will now simulate Jerry's contribution to the project. To do this, you will
-
-* switch back to the main branch,
-  
-* create a new branch for Jerry,
-  
-* make changes, and then
-  
-* stage, commit, and push these changes to GitHub.
-
-2. **Jerry's Work:**
-
-* Switch back to the main branch using the command: 
-  
-  ``git checkout main``
-  
-This command switches your current working directory back to the **main** branch, ensuring that Jerry's changes start from the latest version of the project.
-
-* Pull the latest changes using the command: 
-  
-  ``git pull origin update-navigation``
-
-
-![sudo](./img/003.checkout_pull_update.png)
-
-
-This ensures that you have the latest updates from the repository.
-
-* Create a new branch for Jerry's Work using the command: 
-  
-  ``git checkout -b add-contact-info``
-
-This creates a new branch where Jerry will make his changes, keeping them separate from the **main** project until they are ready to be merged.
-
-* open **index.html** and add contact information: Make your changes to the **index.html** file by adding contact information. This simulates Jerry's task.
-
-* Stage Jerry's changes using the command: 
-  
-  ``git add index.html``
-
-* This command stages the changes Jerry made to the **index.html** file, preparing them for commit.
-
-* Commit Jerry's changes using the command: 
-  
-  ``git commit -m "Add contact information"``
-
-This saves Jerry's changes in the branch's history, with a message describing what was done.
-
-* Push Jerry's branch to GitHub using the command: 
-  
+* Push the updated branch to GitHub by using the command: 
+ 
   ``git push origin add-contact-info``
 
+This command uploads Jerry's changes to GitHub. Now, his branch reflects both his work and the latest updates from the main branch.
 
-![sudo](./img/07_Jerry_brach_add_commit.png)
+The **origin** keyboard in the command refers to the default name Git gives to the remote repository from which you cloned your project.
 
-![sudo](./img/08_Jerry_push.png)
+* Create the Pull Request (PR) for Jerry's changes, similar to how you did for Tom.
+
+* Merge Jerry's Pull Request: Click on **"Confirm merge"** to complete the process of merging the PR into the main branch.
 
 
-This command uploads Jerry's branch to the GitHub repository, making it available for review and merging into the main project.
+![sudo](./img/006.Confirm_Merge.png)
+
+
+![sudo](./img/11_github_branches.png)
+
+
+This simulated workflow illustrates how Git facilitates collaborative development, allowing multiple developers to work simultaneously on different aspects of a project and merge their contributions seamlessly , even when working on the same files.
 
 
 
