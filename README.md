@@ -27,7 +27,7 @@ After both Tom and Jerry have pushed their work to their respective branches, th
 2. **Switch to the Branch:**
 
 * Click on the branch dropdown menu near the top-left corner of the file and select the branch Tom that you have been working on ("update-navigation".)
-* 
+
 
 ![sudo](./img/1.GitHub_main_branch.png)
 
